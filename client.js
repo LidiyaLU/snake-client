@@ -21,6 +21,10 @@ const connect = function() {
     console.log('Server says: ', data);
   });
 
+  conn.on('data', (data) => {
+    conn.write('Move: up');
+  });
+
   return conn;
   
 }
